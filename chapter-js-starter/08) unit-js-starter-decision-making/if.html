@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>آموزش ساختارهای تصمیم گیری در جاوا اسکریپت</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>سلام به همه دانشجویان عزیز و برنامه‌نویسان حرفه‌ای آینده</h1>
+        <hr />
+
+        <script>
+            var age = prompt("How old are you?");
+            
+            // if(age > 20 && age <= 50) {
+            //     alert("You can use our website!");
+            // } else if(age > 50) {
+            //     alert("Googd morning!");
+            // }
+            // else {
+            //     alert("OOPs!! You can't use our website!");
+            // }
+
+            (age > 20 && age <= 50) ?
+                alert("You can use our website!")
+                :
+                (age > 50) ? alert("Googd morning!"): alert("OOPs!! You can't use our website!");
+            
+            switch (age) {
+                case "33":
+                    alert("You are 23 ....");
+                    break;
+                case "43":        
+                case "53":        
+                    alert("43 53 ....");
+                    break;
+            
+                default:
+                    alert("We ar in default section");
+                    break;
+            }
+        </script>
+    </body>
+</html>

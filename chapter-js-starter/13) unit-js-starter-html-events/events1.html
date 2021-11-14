@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>آموزش html events در جاوا اسکریپت</title>
+    </head>
+    <body style="text-align: center;" onload="load()">
+        <h1>سلام به همه دانشجویان عزیز و برنامه‌نویسان حرفه‌ای آینده</h1>
+        <hr />
+        
+        <label>لطفا نام خود را وارد کنید</label>
+        <input name="test" onkeydown="keyDown(event)" onchange="inputChanger(event)" />
+        <hr />
+        <button onclick="clicked(event)">کلیک کنید</button>
+        <hr />
+        <div onmouseout="mouseOut(event)" onmouseover="mouseOver(event)" style="width: 300px; height: 300px; background-color: yellow;"></div>
+        <script>
+            function inputChanger(event) {
+                alert('سلام ' + event.target.value);
+                console.log('changed ...');
+            }
+
+            function clicked(event) {
+                console.log(event);
+                if(event.ctrlKey) {
+                    alert('سلام رئیس');
+                } else {
+                    alert('سلام');
+                }
+            }
+
+            function mouseOver(event) {
+                console.log(event);
+
+                event.target.innerHTML = "سلام دوستم";
+            }
+
+            function mouseOut(event) {
+                console.log(event);
+
+                event.target.innerHTML = "چرا رفتی دوستم؟!!!!";
+            }
+
+            var persianChars = {
+                83: 'س'
+            }
+            function keyDown(event) {
+                console.log(event);
+
+                event.target.value = persianChars[event.keyCode];
+            }
+
+            function load() {
+                alert('سلام. خوش آمدید');
+            }
+        </script>
+    </body>
+</html>

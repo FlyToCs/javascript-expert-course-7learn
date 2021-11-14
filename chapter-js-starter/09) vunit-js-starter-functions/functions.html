@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>آموزش ساختارهای تصمیم گیری در جاوا اسکریپت</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>سلام به همه دانشجویان عزیز و برنامه‌نویسان حرفه‌ای آینده</h1>
+        <hr />
+
+        <button onclick="sum(4)">کلیک کنید</button>
+        <script>
+            sum(5, 6);
+            
+            function sum(a, b) {
+                if(b === undefined) {
+                    b = 3;
+                }
+                alert(a+b);
+            }
+            var sayHi;
+            var age = 15;
+            if(age > 14) {
+                sayHi = function() {
+                    alert("hi 14...");
+                }
+            } else {
+                sayHi = function() {
+                    alert("hi baby ...");
+                }
+            }
+
+            sayHi();
+            
+            // console.log(sayHi);
+            // console.log(sayHi());
+        </script>
+    </body>
+</html>

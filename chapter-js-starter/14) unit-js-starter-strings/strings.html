@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>آموزش کار با رشته‌های متنی در جاوا اسکریپت</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>سلام به همه دانشجویان عزیز و برنامه‌نویسان حرفه‌ای آینده</h1>
+        <hr />
+
+        <label>نام:</label>
+        <input name="name" onchange="validate(event)" />
+        
+        <script>
+            var mytext = "sample text";
+            
+            console.log(mytext.length);
+
+            function validate(event) {
+                if(event.target.value.length < 3) {
+                    alert('خطا! نام شما باید حداقل ۳ کاراکتر باشد');
+                }
+            }
+
+            var text = "Salam good\n \"morning\"";
+            console.log(text[0]);
+            console.log(text);
+            console.log(text.toUpperCase());
+            console.log(text.indexOf("morning"));
+            console.log(text.includes("morning"));
+            console.log(text.slice(0, 5));
+            
+            text = 's' + text.slice(1, 20);
+            console.log(text);
+
+            console.log(text.substr(-3, 3));
+            console.log(text.replace("morning", "afternoon"));
+            
+            var input = "3,5,4,6,8,7";
+            var array = input.split(",");
+            console.log(array);
+
+            if(text.localeCompare(input)) {}
+            </script>
+    </body>
+</html>
